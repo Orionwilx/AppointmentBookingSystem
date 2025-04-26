@@ -16,5 +16,4 @@ public class UserDto {
     private Date birthday;
     private String phone;
     private String address;
-    private Timestamp created;
 }
