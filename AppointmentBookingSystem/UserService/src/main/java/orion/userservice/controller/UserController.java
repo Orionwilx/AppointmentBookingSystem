@@ -4,7 +4,7 @@ import orion.userservice.dto.UserDto;
 import orion.userservice.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*; // Importa anotaciones REST
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -51,9 +51,9 @@ public class UserController {
     }
 
 
-    @DeleteMapping("/{id}") // Responde a DELETE /api/v1/users/{id}
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable UUID id) {
         userService.deleteUser(id);
-        return ResponseEntity.noContent().build(); // Devuelve 204 No Content
+        return ResponseEntity.noContent().build();
     }
 }
